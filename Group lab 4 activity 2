@@ -1,0 +1,77 @@
+hours= int(input("How many hours were you parked for?")) 
+
+if 0   <= hours <= 2:
+    fee= 4
+    print(fee)
+
+if 2 < hours <=4:
+    fee=7
+    print(fee)
+
+if 4 < hours <= 20:
+    fee= 7 + (hours - 4) 
+    print(fee)    
+
+if 20< hours <= 24:
+    fee= 24
+    print(fee)    
+
+if 24< hours:
+    days= int(hours / 24)   
+    remainder= hours % 24
+    if 0   <= remainder <= 2:
+        fee= 4
+        price= days * 24
+        print(price+fee)
+    if 2 < remainder <=4:
+        fee=7
+        price= days * 24
+        print(price+fee)
+    if 4 < remainder <= 20:
+        fee= 7 + (remainder - 4) 
+        price= days * 24
+        print(price+fee)
+    if 20< remainder <= 24:
+        fee= 24
+        price= days * 24
+
+        print(price+fee)   
+
+
+if hours < 0:
+    lost_hours= abs(hours)
+    if 0   <= lost_hours <= 2:
+        fee= 4
+        print(fee+36)
+
+    if 2 < lost_hours <=4:
+        fee=7
+        print(fee+36)
+    if 4 < lost_hours <= 20:
+        fee= 7 + (lost_hours - 4) 
+        print(fee+36)    
+
+    if 20< lost_hours <= 24:
+        fee= 24
+        print(fee+36)    
+
+    if 24< lost_hours:
+        days= int(lost_hours / 24)   
+        lost_remainder= lost_hours % 24
+        if 0   <= lost_remainder <= 2:
+            fee= 4
+            price= days * 24
+            print(price+fee+36)
+        if 2 < lost_remainder <=4:
+            fee=7
+            price= days * 24
+            print(price+fee+36)
+        if 4 < lost_remainder <= 20:
+            fee= 7 + (lost_remainder - 4) 
+            price= days * 24
+            print(price+fee+36)
+        if 20< lost_remainder <= 24:
+            fee= 24
+            price= days * 24
+
+            print(price+fee+36) 
